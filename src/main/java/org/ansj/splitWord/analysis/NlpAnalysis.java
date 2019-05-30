@@ -4,10 +4,7 @@ import org.ansj.app.crf.SplitWord;
 import org.ansj.dic.LearnTool;
 import org.ansj.domain.*;
 import org.ansj.library.CrfLibrary;
-import org.ansj.recognition.arrimpl.NewWordRecognition;
-import org.ansj.recognition.arrimpl.NumRecognition;
-import org.ansj.recognition.arrimpl.PersonRecognition;
-import org.ansj.recognition.arrimpl.UserDefineRecognition;
+import org.ansj.recognition.arrimpl.*;
 import org.ansj.recognition.impl.NatureRecognition;
 import org.ansj.splitWord.Analysis;
 import org.ansj.util.AnsjReader;
@@ -130,6 +127,10 @@ public class NlpAnalysis extends Analysis {
 					new NumRecognition(isQuantifierRecognition).recognition(graph);
 				}
 
+				//随机字符串识别
+				if (isRandomStringRecognition) {
+					new RandomStringRecognition().recognition(graph);
+				}
 				// 词性标注
 				List<Term> result = getResult();
 

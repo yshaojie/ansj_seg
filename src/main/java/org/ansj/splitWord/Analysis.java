@@ -55,6 +55,9 @@ public abstract class Analysis {
 	// 是否标记新词
 	protected boolean isNewWord = true;
 
+	// 是否开启随机字符串识别
+	protected boolean isRandomStringRecognition = true;
+
 	/**
 	 * 文档读取流
 	 */
@@ -387,4 +390,8 @@ public abstract class Analysis {
 		return this;
 	}
 
+	public Analysis setIsRandomStringRecognition(boolean randomStringRecognition) {
+		isRandomStringRecognition = randomStringRecognition;
+		return this;
+	}
 }

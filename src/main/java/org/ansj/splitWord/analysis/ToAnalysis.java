@@ -4,6 +4,7 @@ import org.ansj.domain.Result;
 import org.ansj.domain.Term;
 import org.ansj.recognition.arrimpl.NumRecognition;
 import org.ansj.recognition.arrimpl.PersonRecognition;
+import org.ansj.recognition.arrimpl.RandomStringRecognition;
 import org.ansj.recognition.arrimpl.UserDefineRecognition;
 import org.ansj.splitWord.Analysis;
 import org.ansj.util.AnsjReader;
@@ -40,6 +41,11 @@ public class ToAnalysis extends Analysis {
 				// 数字发现
 				if (isNumRecognition) {
 					new NumRecognition(isQuantifierRecognition && graph.hasNumQua).recognition(graph);
+				}
+
+				//随机字符串识别
+				if (isRandomStringRecognition) {
+					new RandomStringRecognition().recognition(graph);
 				}
 
 				// 用户自定义词典的识别

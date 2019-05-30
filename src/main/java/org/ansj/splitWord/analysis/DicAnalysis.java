@@ -6,7 +6,7 @@ import org.ansj.domain.TermNature;
 import org.ansj.domain.TermNatures;
 import org.ansj.recognition.arrimpl.NumRecognition;
 import org.ansj.recognition.arrimpl.PersonRecognition;
-import org.ansj.recognition.arrimpl.UserDefineRecognition;
+import org.ansj.recognition.arrimpl.RandomStringRecognition;
 import org.ansj.splitWord.Analysis;
 import org.ansj.util.AnsjReader;
 import org.ansj.util.Graph;
@@ -49,6 +49,11 @@ public class DicAnalysis extends Analysis {
 					new PersonRecognition().recognition(graph);
 					graph.walkPathByScore();
 					graph.walkPathByScore();
+				}
+
+				//随机字符串识别
+				if (isRandomStringRecognition) {
+					new RandomStringRecognition().recognition(graph);
 				}
 
 				return getResult();

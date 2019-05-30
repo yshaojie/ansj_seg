@@ -20,6 +20,8 @@ public class TermNatures implements Serializable {
 	public static final TermNatures NR = new TermNatures(TermNature.NR);
 
 	public static final TermNatures EN = new TermNatures(TermNature.EN);
+	//有字符和数字构成的随机字符串
+	public static final TermNatures ENM = new TermNatures(TermNature.ENM);
 
 	public static final TermNatures END = new TermNatures(TermNature.END, 50610, -1);
 

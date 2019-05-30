@@ -19,6 +19,8 @@ public class TermNature implements Serializable{
 	 */
 	public static final TermNature M = new TermNature("m", 1);
 	public static final TermNature EN = new TermNature("en", 1);
+	//有字符和数字构成的随机字符串
+	public static final TermNature ENM = new TermNature("enm", 1);
 	public static final TermNature BEGIN = new TermNature("始##始", 1);
 	public static final TermNature END = new TermNature("末##末", 1);
 	public static final TermNature USER_DEFINE = new TermNature("userDefine", 1);
